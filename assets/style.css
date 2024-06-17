@@ -1,0 +1,105 @@
+body {
+    display: grid;
+    height: 100vh;
+    background-color:#ddd;
+    grid-template-areas: 
+        "navbar navbar"
+        "sidebar product-grid"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color:#ddd;
+    padding: 1rem;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 0.5rem 0;
+}
+
+.producto-grid {
+    grid-area: product-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.producto 
+{   
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.producto img {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height:auto;
+}
+
+.producto h3 {
+
+    font-size:100%;
+    margin: 1%;
+}
+
+.producto p {
+    color: #333;
+    font-size: 100%;
+    margin: 0.5rem 0;
+}
+
+.producto button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0;
+    width: 100%;
+    margin-top: auto;
+    
+}
+
+.producto button:hover {
+    background-color: #0055a5;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: white;
+    color: black;
+    text-align: center; 
+    padding: auto;   
+}
